@@ -10,7 +10,6 @@ app.use(express.json());
 
 let db;
 
-
 console.log(`,------------------------------------------------------.`);
 console.log(`|                                                      |`);
 console.log(`|    ______                 _                          |`);
