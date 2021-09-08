@@ -43,7 +43,6 @@ async function initDB() {
 }
 
 async function init() {
-
     
     let answer = await inquirer.prompt([
         {
@@ -174,7 +173,7 @@ async function removeEmployee() {
     db.query('DELETE FROM employees WHERE id = ?', employeeToRemove.id);
     console.log('');
     console.log('');
-    console.log(`${employeeToRemove} was deleted from the database.`);
+    console.log(`${employeeToRemove.first_name} ${employeeToRemove.last_name} was deleted from the database.`);
     viewEmployees();
 }
 
@@ -204,6 +203,8 @@ async function updateRole() {
     console.log('');
     console.log('');
     console.log(`${updateEmployee.employee.first_name} ${updateEmployee.employee.last_name} has been assigned the role ${updateEmployee.role.title}.`)
+    console.log('');
+    console.log('');
     init();
 }
 
