@@ -85,7 +85,13 @@ async function init() {
 }
 
 async function viewEmployees() {
-    const [employees] = await db.query('SELECT employee.id, employee.first_name, employee.last_name, roles.title, departments.department, roles.salary, CONCAT(managerName.first_name," ",managerName.last_name) AS manager FROM employees employee LEFT JOIN employees managerName ON employee.manager_id = managerName.id LEFT JOIN roles ON employee.role_id = roles.id LEFT JOIN departments ON roles.department_id = departments.id;')
+    const [employees] = await db.query(`SELECT employee.id, employee.first_name, employee.last_name, 
+                                        roles.title, departments.department, roles.salary, 
+                                        CONCAT(managerName.first_name," ",managerName.last_name) AS manager 
+                                        FROM employees employee 
+                                        LEFT JOIN employees managerName ON employee.manager_id = managerName.id
+                                        LEFT JOIN roles                 ON employee.role_id = roles.id 
+                                        LEFT JOIN departments           ON roles.department_id = departments.id;`)
     console.log('');
     console.log('');
     console.table(employees);

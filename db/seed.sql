@@ -1,5 +1,5 @@
 INSERT INTO employees (first_name, last_name, role_id, manager_id)
-VALUES ('John', 'Paul', 2, 3),
+VALUES ('John', 'Paul', 2, 4),
        ('Garrett', 'Lockhart', 2, 3),
        ('Jessica', 'Trevino', 1, 4),
        ('Mike', 'Scott', 6, 3),

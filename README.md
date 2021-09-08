@@ -7,7 +7,8 @@ The purpose of this project was to create a Command Line Interface application f
 Some features of the site are:
 - The user is able to view all current employees, departments, and roles.
 - The user is able to add roles, departments, and employees to the database.
-- The user is able to change roles that an employee has. 
+- The user is able to change roles that an employee has.
+- The user is able to delete employees from the roster.  
 
 Here is a short video displaying the application functionality: https://youtu.be/JPDCfV4Z2LU
 
