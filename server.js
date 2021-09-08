@@ -166,7 +166,7 @@ async function removeEmployee() {
         message: 'Which employee would you like to remove?',
         choices: employees.map((employee) => ({name: `${employee.first_name} ${employee.last_name}`, value: employee}))
     })
-    db.query('DELETE * WHERE id = ?', employeeToRemove.id);
+    db.query('DELETE FROM employees WHERE id = ?', employeeToRemove.id);
     console.log('');
     console.log('');
     console.log(`${employeeToRemove} was deleted from the database.`);
