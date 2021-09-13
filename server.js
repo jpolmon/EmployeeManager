@@ -90,7 +90,7 @@ async function viewEmployees() {
                                         FROM employees employee 
                                         LEFT JOIN employees managerName ON employee.manager_id = managerName.id
                                         LEFT JOIN roles                 ON employee.role_id = roles.id 
-                                        LEFT JOIN departments           ON roles.department_id = departments.id;`)
+                                        LEFT JOIN departments           ON roles.department_id = departments.id;`);
     console.log('');
     console.log('');
     console.table(employees);
